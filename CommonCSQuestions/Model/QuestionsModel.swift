@@ -9,25 +9,11 @@
 import UIKit
 import Foundation
 
-class QuestionsModel {    
+class QuestionsModel: NSObject {
   
-  public let questions: [String] = ["Question 1", "Question 2"]
-  
-  private init() {
-    initValues()
-  }
-  
-  static let shared = QuestionsModel()
-  
-  private func initValues() {
-    
-  }
-  
-  func questionsCount() -> Int {
-    return questions.count
-  }
-  
-  func questionTextFor(itemAtIndex: Int) -> String {
-    return questions[itemAtIndex]
-  }
+  // MARK: - vars
+  var smallTitle: String = ""
+  var question: String = ""
+  var isFirstLabelAndTextValid: Bool = false
+  var isSecondLabelAndTextValid: Bool = false
 }

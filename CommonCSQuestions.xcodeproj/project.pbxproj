@@ -17,6 +17,7 @@
 		8130EB8723EEFDB0007B547F /* QuestionsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8130EB8623EEFDB0007B547F /* QuestionsModel.swift */; };
 		8130EB8D23EF013C007B547F /* QuestionsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8130EB8C23EF013C007B547F /* QuestionsCell.swift */; };
 		8130EB8F23EF2C99007B547F /* SolutionVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8130EB8E23EF2C99007B547F /* SolutionVC.swift */; };
+		8130EB9123EF3ADF007B547F /* QuestionsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8130EB9023EF3ADF007B547F /* QuestionsManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		8130EB8623EEFDB0007B547F /* QuestionsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionsModel.swift; sourceTree = "<group>"; };
 		8130EB8C23EF013C007B547F /* QuestionsCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuestionsCell.swift; sourceTree = "<group>"; };
 		8130EB8E23EF2C99007B547F /* SolutionVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SolutionVC.swift; sourceTree = "<group>"; };
+		8130EB9023EF3ADF007B547F /* QuestionsManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuestionsManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +100,7 @@
 		8130EB8823EEFDB6007B547F /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				8130EB9023EF3ADF007B547F /* QuestionsManager.swift */,
 				8130EB8623EEFDB0007B547F /* QuestionsModel.swift */,
 			);
 			path = Model;
@@ -198,6 +201,7 @@
 			files = (
 				8130EB8D23EF013C007B547F /* QuestionsCell.swift in Sources */,
 				8130EB6C23EEF519007B547F /* ViewController.swift in Sources */,
+				8130EB9123EF3ADF007B547F /* QuestionsManager.swift in Sources */,
 				8130EB8723EEFDB0007B547F /* QuestionsModel.swift in Sources */,
 				8130EB8F23EF2C99007B547F /* SolutionVC.swift in Sources */,
 				8130EB6823EEF519007B547F /* AppDelegate.swift in Sources */,

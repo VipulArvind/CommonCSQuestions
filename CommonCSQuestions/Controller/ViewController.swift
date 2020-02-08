@@ -39,7 +39,7 @@ extension ViewController: UICollectionViewDataSource, UICollectionViewDelegateFl
   }
   
   func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-    return QuestionsModel.shared.questionsCount()
+    return QuestionsManager.shared.questionsCount()
   }
   
   func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -49,7 +49,7 @@ extension ViewController: UICollectionViewDataSource, UICollectionViewDelegateFl
         preconditionFailure("Invalid cell type")
     }
     
-    cell.updateValues(questionText: QuestionsModel.shared.questionTextFor(itemAtIndex: indexPath.row))
+    cell.updateValues(questionText: QuestionsManager.shared.questionTextFor(itemAtIndex: indexPath.row))
     
     return cell
   }
