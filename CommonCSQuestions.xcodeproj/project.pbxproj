@@ -68,6 +68,7 @@
 				8130EB6723EEF519007B547F /* AppDelegate.swift */,
 				8130EB6923EEF519007B547F /* SceneDelegate.swift */,
 				8130EB8823EEFDB6007B547F /* Model */,
+				8130EB8523EEFCB6007B547F /* View */,
 				8130EB7E23EEFBE0007B547F /* Controller */,
 				8130EB6D23EEF519007B547F /* Main.storyboard */,
 				8130EB7023EEF51A007B547F /* Assets.xcassets */,
@@ -98,7 +99,6 @@
 			isa = PBXGroup;
 			children = (
 				8130EB8623EEFDB0007B547F /* QuestionsModel.swift */,
-				8130EB8523EEFCB6007B547F /* View */,
 			);
 			path = Model;
 			sourceTree = "<group>";
