@@ -26,7 +26,6 @@ class ViewController: UIViewController {
   }
   
   func makeListOfQuestions() {
-    
   }
   
   func updateUI() {
@@ -56,7 +55,6 @@ extension ViewController: UICollectionViewDataSource, UICollectionViewDelegateFl
   }
   
   func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-    print("width = \(CVQuestions.frame.width)")
     return CGSize(width: CVQuestions.frame.width, height: 100.0)
   }
 }

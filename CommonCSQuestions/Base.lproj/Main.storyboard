@@ -51,6 +51,7 @@
                                         <size key="customSize" width="414" height="100"/>
                                         <connections>
                                             <outlet property="lblQuestionText" destination="XL1-3i-Ihl" id="hh6-sG-4Ov"/>
+                                            <segue destination="n8y-EU-Uh0" kind="show" id="Hjw-vf-ejd"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
@@ -73,6 +74,22 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1047.8260869565217" y="137.94642857142856"/>
+        </scene>
+        <!--SolutionVC-->
+        <scene sceneID="xqh-aO-kxl">
+            <objects>
+                <viewController id="n8y-EU-Uh0" userLabel="SolutionVC" customClass="ViewController" customModule="CommonCSQuestions" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="7Dk-Wt-b49">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="4BM-Wq-4mm"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Common CS Questions" id="wOJ-xL-m3h"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Pvh-FX-YCj" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2072" y="138"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="YYb-Om-B3i">

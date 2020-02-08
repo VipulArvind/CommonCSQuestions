@@ -23,11 +23,11 @@ class QuestionsModel {
     
   }
   
-  func questionsCount() ->Int {
+  func questionsCount() -> Int {
     return questions.count
   }
   
-  func questionTextFor(itemAtIndex:Int) -> String {
+  func questionTextFor(itemAtIndex: Int) -> String {
     return questions[itemAtIndex]
   }
 }
