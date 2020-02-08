@@ -39,7 +39,7 @@ extension ViewController: UICollectionViewDataSource, UICollectionViewDelegateFl
   }
   
   func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-    return QuestionsManager.shared.questionsCount()
+    return QuestionsManager.shared.count()
   }
   
   func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -49,12 +49,34 @@ extension ViewController: UICollectionViewDataSource, UICollectionViewDelegateFl
         preconditionFailure("Invalid cell type")
     }
     
-    cell.updateValues(questionText: QuestionsManager.shared.questionTextFor(itemAtIndex: indexPath.row))
+    guard
+      let aQuestion = QuestionsManager.shared.question(at: indexPath.row)
+      else {
+        return cell
+    }
+    
+    cell.updateValues(question: aQuestion)
     
     return cell
   }
   
   func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
     return CGSize(width: CVQuestions.frame.width, height: 100.0)
+  }
+}
+
+extension ViewController {
+  
+  override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+    
+    if let destination = segue.destination as? SolutionVC {
+        guard
+          let index = CVQuestions.indexPathsForSelectedItems?.first,
+          let aQuestion = QuestionsManager.shared.question(at: index.row)
+            else {
+              return
+          }
+          destination.question = aQuestion
+    }
   }
 }

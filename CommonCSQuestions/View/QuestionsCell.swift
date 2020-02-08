@@ -10,9 +10,9 @@ import UIKit
 
 class QuestionsCell: UICollectionViewCell {
   
-  @IBOutlet weak var lblQuestionText: UILabel!
+  @IBOutlet weak var lblSmallTitle: UILabel!
   
-  func updateValues(questionText: String) {
-    lblQuestionText.text = questionText    
+  func updateValues(question: QuestionModel) {
+    lblSmallTitle.text = question.smallTitle
   }
 }

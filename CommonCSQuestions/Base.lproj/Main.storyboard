@@ -35,7 +35,6 @@
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XL1-3i-Ihl">
                                                     <rect key="frame" x="10" y="6" width="394" height="21"/>
-                                                    <color key="backgroundColor" red="0.84947559930000005" green="0.79684289379999995" blue="0.31964362159999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -47,10 +46,9 @@
                                                 <constraint firstAttribute="trailing" secondItem="XL1-3i-Ihl" secondAttribute="trailing" constant="10" id="wOX-1v-2fz"/>
                                             </constraints>
                                         </collectionViewCellContentView>
-                                        <color key="backgroundColor" red="0.84050506349999998" green="0.56112126770000004" blue="0.23558610360000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <size key="customSize" width="414" height="100"/>
                                         <connections>
-                                            <outlet property="lblQuestionText" destination="XL1-3i-Ihl" id="hh6-sG-4Ov"/>
+                                            <outlet property="lblSmallTitle" destination="XL1-3i-Ihl" id="mZo-iR-phq"/>
                                             <segue destination="n8y-EU-Uh0" kind="show" id="Hjw-vf-ejd"/>
                                         </connections>
                                     </collectionViewCell>
@@ -78,15 +76,15 @@
         <!--SolutionVC-->
         <scene sceneID="xqh-aO-kxl">
             <objects>
-                <viewController id="n8y-EU-Uh0" userLabel="SolutionVC" customClass="ViewController" customModule="CommonCSQuestions" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="n8y-EU-Uh0" userLabel="SolutionVC" customClass="SolutionVC" customModule="CommonCSQuestions" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="7Dk-Wt-b49">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="32" translatesAutoresizingMaskIntoConstraints="NO" id="4Od-v7-kJZ">
-                                <rect key="frame" x="0.0" y="88" width="414" height="257.5"/>
+                                <rect key="frame" x="20" y="108" width="374" height="257.5"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bf9-vX-HP8">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bf9-vX-HP8">
                                         <rect key="frame" x="0.0" y="0.0" width="42" height="20.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
@@ -117,11 +115,14 @@
                                 </subviews>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fd9-YI-HBQ">
-                                <rect key="frame" x="184" y="365.5" width="46" height="30"/>
+                                <rect key="frame" x="184" y="385.5" width="46" height="30"/>
                                 <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="goButtonTapped:" destination="n8y-EU-Uh0" eventType="touchUpInside" id="owb-bJ-KUL"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="irZ-7g-Jfs">
-                                <rect key="frame" x="186" y="415.5" width="42" height="20.5"/>
+                                <rect key="frame" x="186" y="435.5" width="42" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -130,16 +131,23 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="fd9-YI-HBQ" firstAttribute="centerX" secondItem="4BM-Wq-4mm" secondAttribute="centerX" id="MEQ-Uq-NVE"/>
-                            <constraint firstItem="4BM-Wq-4mm" firstAttribute="trailing" secondItem="4Od-v7-kJZ" secondAttribute="trailing" id="ToJ-9C-Llk"/>
-                            <constraint firstItem="4Od-v7-kJZ" firstAttribute="top" secondItem="4BM-Wq-4mm" secondAttribute="top" id="UeC-27-fFX"/>
+                            <constraint firstItem="4BM-Wq-4mm" firstAttribute="trailing" secondItem="4Od-v7-kJZ" secondAttribute="trailing" constant="20" id="ToJ-9C-Llk"/>
+                            <constraint firstItem="4Od-v7-kJZ" firstAttribute="top" secondItem="4BM-Wq-4mm" secondAttribute="top" constant="20" id="UeC-27-fFX"/>
                             <constraint firstItem="irZ-7g-Jfs" firstAttribute="centerX" secondItem="4BM-Wq-4mm" secondAttribute="centerX" id="ZBF-tR-jqM"/>
-                            <constraint firstItem="4Od-v7-kJZ" firstAttribute="leading" secondItem="4BM-Wq-4mm" secondAttribute="leading" id="ZyG-e6-WLQ"/>
+                            <constraint firstItem="4Od-v7-kJZ" firstAttribute="leading" secondItem="4BM-Wq-4mm" secondAttribute="leading" constant="20" id="ZyG-e6-WLQ"/>
                             <constraint firstItem="fd9-YI-HBQ" firstAttribute="top" secondItem="4Od-v7-kJZ" secondAttribute="bottom" constant="20" id="m3l-bB-tdM"/>
                             <constraint firstItem="irZ-7g-Jfs" firstAttribute="top" secondItem="fd9-YI-HBQ" secondAttribute="bottom" constant="20" id="slX-1b-3IZ"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="4BM-Wq-4mm"/>
                     </view>
                     <navigationItem key="navigationItem" title="Common CS Questions" id="wOJ-xL-m3h"/>
+                    <connections>
+                        <outlet property="lbl1" destination="Fyp-HH-54a" id="pYJ-11-ibi"/>
+                        <outlet property="lbl2" destination="Aj8-3G-qtG" id="bpY-SC-7K6"/>
+                        <outlet property="lblQuestion" destination="Bf9-vX-HP8" id="FWh-Mu-Ens"/>
+                        <outlet property="textField1" destination="G0i-cg-2j9" id="KlW-xN-0W7"/>
+                        <outlet property="textField2" destination="yM7-eE-UA7" id="SeM-xN-Vxs"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Pvh-FX-YCj" sceneMemberID="firstResponder"/>
             </objects>

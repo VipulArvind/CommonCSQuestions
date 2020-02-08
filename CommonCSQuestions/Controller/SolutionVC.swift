@@ -44,11 +44,53 @@ import UIKit
  reversedNames = names.sorted(by:{ $0 > $1})
  
  */
+
 class SolutionVC: UIViewController {
+  
+  // MARK: - Outlets
+  
+  @IBOutlet weak var lblQuestion: UILabel!
+  
+  @IBOutlet weak var lbl1: UILabel!
+  @IBOutlet weak var textField1: UITextField!
+  
+  @IBOutlet weak var lbl2: UILabel!
+  @IBOutlet weak var textField2: UITextField!
+  
+  @IBOutlet weak var lblAnswer: UILabel!
+  
+  // MARK: - vars
+  
+  public var question: QuestionModel = QuestionModel()
 
   override func viewDidLoad() {
     super.viewDidLoad()
-    // Do any additional setup after loading the view.
-
+    
+    self.title = question.smallTitle
+    lblQuestion.text = question.text
+    
+    if question.isFirstLabelAndTextValid {
+      lbl1.isHidden = false
+      lbl1.text = question.textForFirstLabel
+      textField1.isHidden = false
+      textField1.text = ""
+    } else {
+      lbl1.isHidden = true
+      textField1.isHidden = true
+    }
+    
+    if question.isSecondLabelAndTextValid {
+      lbl2.isHidden = false
+      lbl2.text = question.textForSecondLabel
+      textField2.isHidden = false
+      textField2.text = ""
+    } else {
+      lbl2.isHidden = true
+      textField2.isHidden = true
+    }
+  }
+  
+  @IBAction func goButtonTapped(_ sender: Any) {
+    
   }
 }
