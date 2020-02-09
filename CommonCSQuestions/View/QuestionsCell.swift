@@ -6,10 +6,17 @@
 //  Copyright © 2020 Vipul Arvind. All rights reserved.
 //
 
+//
+// QuestionsCell
+//      Class to implement the UICollectionViewCell of 1 question
+//
+//
+
 import UIKit
 
 class QuestionsCell: UICollectionViewCell {
   
+  // MARK: - Outlets
   @IBOutlet weak var lblSmallTitle: UILabel!
   
   func updateValues(question: QuestionModel) {

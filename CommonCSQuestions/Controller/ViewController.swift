@@ -6,12 +6,20 @@
 //  Copyright © 2020 Vipul Arvind. All rights reserved.
 //
 
+//
+// ViewController
+//      VC for home screen
+//
+//
+
 import UIKit
 
 class ViewController: UIViewController {
   
+  // MARK: - Outlets
   @IBOutlet weak var CVQuestions: UICollectionView!
   
+  // MARK: - vars
   private let reuseIdentifier = "QuestionsCell"
 
   override func viewDidLoad() {
@@ -32,6 +40,10 @@ class ViewController: UIViewController {
     CVQuestions.reloadData()
   }
 }
+
+//
+// extension for UICollectionViewDataSource, UICollectionViewDelegateFlowLayout
+//
 
 extension ViewController: UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
   func numberOfSections(in collectionView: UICollectionView) -> Int {
@@ -61,12 +73,11 @@ extension ViewController: UICollectionViewDataSource, UICollectionViewDelegateFl
   }
   
   func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-    return CGSize(width: CVQuestions.frame.width, height: 100.0)
+    return CGSize(width: CVQuestions.frame.width, height: 60.0)
   }
 }
 
-extension ViewController {
-  
+extension ViewController {  
   override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
     
     if let destination = segue.destination as? SolutionVC {

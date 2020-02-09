@@ -6,12 +6,20 @@
 //  Copyright © 2020 Vipul Arvind. All rights reserved.
 //
 
+//
+// QuestionsModel
+//      Class to implement the model of 1 question
+//
+//
+
 import UIKit
 import Foundation
 
 class QuestionModel: NSObject {
   
   // MARK: - vars
+  
+  var questionID: Int = 0
   var smallTitle: String = ""
   var text: String = ""
   
@@ -21,16 +29,19 @@ class QuestionModel: NSObject {
   var isSecondLabelAndTextValid: Bool = false
   var textForSecondLabel: String = ""
   
+  // MARK: - Init
   override init() {
   }
   
-  init(smallTitle: String,
+  init(questionID: Int,
+       smallTitle: String,
        text: String,
        isFirstLabelAndTextValid: Bool,
        textForFirstLabel: String,
        isSecondLabelAndTextValid: Bool,
        textForSecondLabel: String) {
     
+    self.questionID = questionID
     self.smallTitle = smallTitle
     self.text = text
     
