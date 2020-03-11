@@ -20,6 +20,7 @@ class QuestionsManager {
   enum MyFuncs {
     case RansomNote ((String, String) -> (String, Bool))
     case Anagram ((String, String) -> (String, Bool))
+    case Fibonacci ((String, String) -> (String, Bool))
   }
   
   // MARK: - vars
@@ -53,9 +54,18 @@ class QuestionsManager {
                                    textForFirstLabel: "Please enter first string",
                                    isSecondLabelAndTextValid: true,
                                    textForSecondLabel: "Please enter second string"))
+    questions.append(QuestionModel(questionID: 2,
+                                   smallTitle: "nth Item of Fibonacci Series",
+                                   text: "Write a function to print the nth item in Fibonacci Series",
+                                   isFirstLabelAndTextValid: true,
+                                   textForFirstLabel: "Please enter the index of item",
+                                   isSecondLabelAndTextValid: false,
+                                   textForSecondLabel: ""))
+
     
     funcs.append(MyFuncs.RansomNote(ransomNote))
     funcs.append(MyFuncs.Anagram(anagram))
+    funcs.append(MyFuncs.Fibonacci(fibonacci))
   }
   
   public func count() -> Int {
@@ -79,6 +89,8 @@ class QuestionsManager {
         return tMyFunc(string1, string2)
     case let .Anagram(tMyFunc):
       return tMyFunc(string1, string2)
+    case let .Fibonacci(tMyFunc):
+        return tMyFunc(string1, string2)
     }
   }
   
@@ -112,5 +124,21 @@ class QuestionsManager {
     } else {
       return ("Strings are not anagram", false)
     }
+  }
+  
+  private func fibonacci(string1: String, string2: String) -> (String, Bool) {
+    if let index = Int(string1),
+      index >= 0 {
+        let nthElement = fibonacciItem(at: index)
+        let retString = "The \(index)th item is \(nthElement)"
+        return(retString, true)
+    }
+    
+    return("Invalid Input", false)
+    //
+  }
+  
+  private func fibonacciItem(at: Int) -> Int {
+    return (at == 0 || at == 1) ? at : fibonacciItem(at: at - 1) + fibonacciItem(at: at - 2)
   }
 }
