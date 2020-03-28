@@ -22,6 +22,7 @@ class QuestionsManager {
     case Anagram ((String, String) -> (String, Bool))
     case Fibonacci ((String, String) -> (String, Bool))
     case LonelyInteger ((String, String) -> (String, Bool))
+    case BalancedDelimiters ((String, String) -> (String, Bool))
   }
   
   // MARK: - vars
@@ -70,11 +71,20 @@ class QuestionsManager {
                                    textForFirstLabel: "Please enter list of numbers separated by space or commas",
                                    isSecondLabelAndTextValid: false,
                                    textForSecondLabel: ""))
+    
+    questions.append(QuestionModel(questionID: 4,
+                                   smallTitle: "Balanced Delimiters",
+                                   text: "Given and expression, check if the parenthesis are balanced",
+                                   isFirstLabelAndTextValid: true,
+                                   textForFirstLabel: "Please enter the expression",
+                                   isSecondLabelAndTextValid: false,
+                                   textForSecondLabel: ""))
 
     funcs.append(MyFuncs.RansomNote(ransomNote))
     funcs.append(MyFuncs.Anagram(anagram))
     funcs.append(MyFuncs.Fibonacci(fibonacci))
     funcs.append(MyFuncs.LonelyInteger(lonelyInteger))
+    funcs.append(MyFuncs.BalancedDelimiters(balancedDelimiters))
   }
   
   public func count() -> Int {
@@ -102,6 +112,8 @@ class QuestionsManager {
         return tMyFunc(string1, string2)
     case let .LonelyInteger(tMyFunc):
       return tMyFunc(string1, string2)
+    case let .BalancedDelimiters(tMyFunc):
+      return tMyFunc(string1, string2)
     }
   }
   
@@ -120,4 +132,9 @@ class QuestionsManager {
   private func lonelyInteger(string1: String, string2: String) -> (String, Bool) {
     return Solutions.lonelyInteger(string1: string1, string2: string2)
   }
+  
+  private func balancedDelimiters(string1: String, string2: String) -> (String, Bool) {
+    return Solutions.balancedDelimiters(string1: string1, string2: string2)
+  }
+
 }

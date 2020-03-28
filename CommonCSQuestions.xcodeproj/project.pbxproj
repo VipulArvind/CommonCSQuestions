@@ -23,6 +23,8 @@
 		81403D1D242F8B0200767CD8 /* Solutions+Anagram.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81403D1C242F8B0200767CD8 /* Solutions+Anagram.swift */; };
 		81403D1F242F8BAF00767CD8 /* Solutions+RansomNote.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81403D1E242F8BAF00767CD8 /* Solutions+RansomNote.swift */; };
 		81403D21242F8F3500767CD8 /* Solutions+LonelyInteger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81403D20242F8F3500767CD8 /* Solutions+LonelyInteger.swift */; };
+		81403D23242FA7F800767CD8 /* Solutions+BalancedDelimiters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81403D22242FA7F800767CD8 /* Solutions+BalancedDelimiters.swift */; };
+		81403D25242FA8EC00767CD8 /* Stack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81403D24242FA8EC00767CD8 /* Stack.swift */; };
 		815105AA23F03A83001E52BA /* readme.txt in Resources */ = {isa = PBXBuildFile; fileRef = 815105A923F03A83001E52BA /* readme.txt */; };
 /* End PBXBuildFile section */
 
@@ -45,6 +47,8 @@
 		81403D1C242F8B0200767CD8 /* Solutions+Anagram.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Solutions+Anagram.swift"; sourceTree = "<group>"; };
 		81403D1E242F8BAF00767CD8 /* Solutions+RansomNote.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Solutions+RansomNote.swift"; sourceTree = "<group>"; };
 		81403D20242F8F3500767CD8 /* Solutions+LonelyInteger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Solutions+LonelyInteger.swift"; sourceTree = "<group>"; };
+		81403D22242FA7F800767CD8 /* Solutions+BalancedDelimiters.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Solutions+BalancedDelimiters.swift"; sourceTree = "<group>"; };
+		81403D24242FA8EC00767CD8 /* Stack.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Stack.swift; sourceTree = "<group>"; };
 		815105A923F03A83001E52BA /* readme.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = readme.txt; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -113,6 +117,7 @@
 		8130EB8823EEFDB6007B547F /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				81403D26242FA8F500767CD8 /* Common Utils */,
 				81403D19242F830900767CD8 /* Solutions */,
 				8130EB9023EF3ADF007B547F /* QuestionsManager.swift */,
 				8130EB8623EEFDB0007B547F /* QuestionsModel.swift */,
@@ -125,11 +130,20 @@
 			children = (
 				81403D1A242F8A4D00767CD8 /* Solutions.swift */,
 				81403D1C242F8B0200767CD8 /* Solutions+Anagram.swift */,
+				81403D22242FA7F800767CD8 /* Solutions+BalancedDelimiters.swift */,
 				81403D17242F830000767CD8 /* Solutions+Fibonacci.swift */,
-				81403D1E242F8BAF00767CD8 /* Solutions+RansomNote.swift */,
 				81403D20242F8F3500767CD8 /* Solutions+LonelyInteger.swift */,
+				81403D1E242F8BAF00767CD8 /* Solutions+RansomNote.swift */,
 			);
 			path = Solutions;
+			sourceTree = "<group>";
+		};
+		81403D26242FA8F500767CD8 /* Common Utils */ = {
+			isa = PBXGroup;
+			children = (
+				81403D24242FA8EC00767CD8 /* Stack.swift */,
+			);
+			path = "Common Utils";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -228,6 +242,7 @@
 			files = (
 				81403D21242F8F3500767CD8 /* Solutions+LonelyInteger.swift in Sources */,
 				81403D1D242F8B0200767CD8 /* Solutions+Anagram.swift in Sources */,
+				81403D25242FA8EC00767CD8 /* Stack.swift in Sources */,
 				81403D18242F830100767CD8 /* Solutions+Fibonacci.swift in Sources */,
 				8130EB8D23EF013C007B547F /* QuestionsCell.swift in Sources */,
 				8130EB6C23EEF519007B547F /* ViewController.swift in Sources */,
@@ -238,6 +253,7 @@
 				8130EB6823EEF519007B547F /* AppDelegate.swift in Sources */,
 				8130EB6A23EEF519007B547F /* SceneDelegate.swift in Sources */,
 				81403D1B242F8A4D00767CD8 /* Solutions.swift in Sources */,
+				81403D23242FA7F800767CD8 /* Solutions+BalancedDelimiters.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

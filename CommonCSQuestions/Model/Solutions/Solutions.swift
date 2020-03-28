@@ -18,7 +18,7 @@ import Foundation
 class Solutions {
   
   class func anagram(string1: String, string2: String) -> (String, Bool) {
-    return Solutions.anagram(string1: string1, string2: string2) ? ("Anagram", true):("Not Anagram", true)
+    return Solutions.anagram(string1: string1, string2: string2) ? ("Anagram", true):("Not Anagram", false)
   }
   
   class func fibonacci(string1: String, string2: String) -> (String, Bool) {
@@ -48,5 +48,9 @@ class Solutions {
     let result = Solutions.lonelyInteger(inArray: intArray)
     
     return (String(result), true)
+  }
+  
+  class func balancedDelimiters(string1: String, string2: String) -> (String, Bool) {
+    return Solutions.balancedDelimiters(inString: string1) ? ("Balanced", true):("Not Balanced", true)
   }
 }
