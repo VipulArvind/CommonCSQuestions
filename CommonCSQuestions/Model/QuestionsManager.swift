@@ -21,6 +21,7 @@ class QuestionsManager {
     case RansomNote ((String, String) -> (String, Bool))
     case Anagram ((String, String) -> (String, Bool))
     case Fibonacci ((String, String) -> (String, Bool))
+    case LonelyInteger ((String, String) -> (String, Bool))
   }
   
   // MARK: - vars
@@ -62,10 +63,18 @@ class QuestionsManager {
                                    isSecondLabelAndTextValid: false,
                                    textForSecondLabel: ""))
 
-    
+    questions.append(QuestionModel(questionID: 3,
+                                   smallTitle: "Lonely Integer",
+                                   text: "Given a list of numbers where all numbers are in pair except 1, find the number",
+                                   isFirstLabelAndTextValid: true,
+                                   textForFirstLabel: "Please enter list of numbers separated by space or commas",
+                                   isSecondLabelAndTextValid: false,
+                                   textForSecondLabel: ""))
+
     funcs.append(MyFuncs.RansomNote(ransomNote))
     funcs.append(MyFuncs.Anagram(anagram))
     funcs.append(MyFuncs.Fibonacci(fibonacci))
+    funcs.append(MyFuncs.LonelyInteger(lonelyInteger))
   }
   
   public func count() -> Int {
@@ -91,54 +100,24 @@ class QuestionsManager {
       return tMyFunc(string1, string2)
     case let .Fibonacci(tMyFunc):
         return tMyFunc(string1, string2)
+    case let .LonelyInteger(tMyFunc):
+      return tMyFunc(string1, string2)
     }
   }
   
   private func ransomNote(ransomeNote: String, magazineArticle: String) -> (String, Bool) {
-    var availableChars = [Int](repeating: 0, count: 256)
-    for char in magazineArticle {
-      if let asciiCode = char.asciiValue {
-        let index: Int = Int(asciiCode)
-        availableChars[index] += 1
-      }
-    }
-    
-    for char in ransomeNote {
-      if let asciiCode = char.asciiValue {
-        let index: Int = Int(asciiCode)
-        availableChars[index] -= 1
-        
-        if availableChars[index] < 0 {
-          return ("Not possible", false)
-        }
-      }
-    }
-    
-    return ("Possible", true)
+    return Solutions.ransomNote(ransomeNote: ransomeNote, magazineArticle: magazineArticle)
   }
-  
-  private func anagram(string1: String, string2: String) -> (String, Bool) {    
-    let areStringsEqual = (string1.sorted() == string2.sorted())
-    if areStringsEqual {
-      return ("Strings are anagram", true)
-    } else {
-      return ("Strings are not anagram", false)
-    }
+      
+  private func anagram(string1: String, string2: String) -> (String, Bool) {
+    return Solutions.anagram(string1: string1, string2: string2)
   }
   
   private func fibonacci(string1: String, string2: String) -> (String, Bool) {
-    if let index = Int(string1),
-      index >= 0 {
-        let nthElement = fibonacciItem(at: index)
-        let retString = "The \(index)th item is \(nthElement)"
-        return(retString, true)
-    }
-    
-    return("Invalid Input", false)
-    //
+    return Solutions.fibonacci(string1: string1, string2: string2)
   }
-  
-  private func fibonacciItem(at: Int) -> Int {
-    return (at == 0 || at == 1) ? at : fibonacciItem(at: at - 1) + fibonacciItem(at: at - 2)
+      
+  private func lonelyInteger(string1: String, string2: String) -> (String, Bool) {
+    return Solutions.lonelyInteger(string1: string1, string2: string2)
   }
 }
