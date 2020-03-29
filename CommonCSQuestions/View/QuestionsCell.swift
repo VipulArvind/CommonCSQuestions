@@ -19,7 +19,7 @@ class QuestionsCell: UICollectionViewCell {
   // MARK: - Outlets
   @IBOutlet weak var lblSmallTitle: UILabel!
   
-  func updateValues(question: QuestionModel) {
+  func updateValues(question: QuestionsModelEx) {
     lblSmallTitle.text = question.smallTitle
   }
 }

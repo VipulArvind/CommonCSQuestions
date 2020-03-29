@@ -27,7 +27,7 @@ class QuestionsManager {
   
   // MARK: - vars
   
-  public var questions: [QuestionModel] = []
+  public var allQuestions: [QuestionsModelEx] = []
 
   // https://stackoverflow.com/questions/24418951/array-of-functions-in-swift
   var funcs = [MyFuncs]()
@@ -39,47 +39,27 @@ class QuestionsManager {
   }
   
   static let shared = QuestionsManager()
-  
+    
   private func initValues() {
+    let fileName = "questions"
+    let fileManager: FileManager = FileManager.default
     
-    questions.append(QuestionModel(questionID: 0,
-                                   smallTitle: "Ransom Note from Magazine Article",
-                                   text: "A Kidnapper wishes to write a ransom note using letters from a Magazine article. Given the article and ransom text, find whether the kidnapper can write the note or not",
-                                   isFirstLabelAndTextValid: true,
-                                   textForFirstLabel: "Please enter the ransom Note",
-                                   isSecondLabelAndTextValid: true,
-                                   textForSecondLabel: "Please enter the Magazine article"))
-    questions.append(QuestionModel(questionID: 1,
-                                   smallTitle: "Test 2 Strings for Anagram",
-                                   text: "Write a function to check if 2 strings are anagram of each other or not",
-                                   isFirstLabelAndTextValid: true,
-                                   textForFirstLabel: "Please enter first string",
-                                   isSecondLabelAndTextValid: true,
-                                   textForSecondLabel: "Please enter second string"))
-    questions.append(QuestionModel(questionID: 2,
-                                   smallTitle: "nth Item of Fibonacci Series",
-                                   text: "Write a function to print the nth item in Fibonacci Series",
-                                   isFirstLabelAndTextValid: true,
-                                   textForFirstLabel: "Please enter the index of item",
-                                   isSecondLabelAndTextValid: false,
-                                   textForSecondLabel: ""))
-
-    questions.append(QuestionModel(questionID: 3,
-                                   smallTitle: "Lonely Integer",
-                                   text: "Given a list of numbers where all numbers are in pair except 1, find the number",
-                                   isFirstLabelAndTextValid: true,
-                                   textForFirstLabel: "Please enter list of numbers separated by space or commas",
-                                   isSecondLabelAndTextValid: false,
-                                   textForSecondLabel: ""))
+    guard let mainUrl = Bundle.main.url(forResource: fileName, withExtension: "json") else { return }
     
-    questions.append(QuestionModel(questionID: 4,
-                                   smallTitle: "Balanced Delimiters",
-                                   text: "Given and expression, check if the parenthesis are balanced",
-                                   isFirstLabelAndTextValid: true,
-                                   textForFirstLabel: "Please enter the expression",
-                                   isSecondLabelAndTextValid: false,
-                                   textForSecondLabel: ""))
-
+    do {
+      if fileManager.fileExists(atPath: mainUrl.path) {
+        let jsonData = try Data(contentsOf: mainUrl)
+        let decoder = JSONDecoder()
+        let aDict = try decoder.decode(AllQuestions.self, from: jsonData)
+        allQuestions = aDict.questions
+        print("vipul")
+      } else {
+        print("file doesnt exist")
+      }
+    } catch {
+      print(error)
+    }
+    
     funcs.append(MyFuncs.RansomNote(ransomNote))
     funcs.append(MyFuncs.Anagram(anagram))
     funcs.append(MyFuncs.Fibonacci(fibonacci))
@@ -88,12 +68,12 @@ class QuestionsManager {
   }
   
   public func count() -> Int {
-    return questions.count
+    return allQuestions.count
   }
   
-  public func question(at: Int) -> QuestionModel? {
-    if questions.count > at {
-      return questions[at]
+  public func question(at: Int) -> QuestionsModelEx? {
+    if allQuestions.count > at {
+      return allQuestions[at]
     }
     
     return nil
@@ -136,5 +116,4 @@ class QuestionsManager {
   private func balancedDelimiters(string1: String, string2: String) -> (String, Bool) {
     return Solutions.balancedDelimiters(string1: string1, string2: string2)
   }
-
 }

@@ -53,4 +53,18 @@ class Solutions {
   class func balancedDelimiters(string1: String, string2: String) -> (String, Bool) {
     return Solutions.balancedDelimiters(inString: string1) ? ("Balanced", true):("Not Balanced", true)
   }
+  
+  func sequenceOf3In(array: [Int]) -> Bool {
+    if array.count < 3 {
+      return false
+    }
+    
+    for index in 0...array.count - 3 {
+      if array[index] + 1 == array[index+1] && array[index+1] + 1 == array[index+2] {
+        return true
+      }
+    }
+    return false
+  }
+
 }

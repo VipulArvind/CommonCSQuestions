@@ -26,6 +26,8 @@
 		81403D23242FA7F800767CD8 /* Solutions+BalancedDelimiters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81403D22242FA7F800767CD8 /* Solutions+BalancedDelimiters.swift */; };
 		81403D25242FA8EC00767CD8 /* Stack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81403D24242FA8EC00767CD8 /* Stack.swift */; };
 		815105AA23F03A83001E52BA /* readme.txt in Resources */ = {isa = PBXBuildFile; fileRef = 815105A923F03A83001E52BA /* readme.txt */; };
+		8171D2412430E0BB004C69EF /* questions.json in Resources */ = {isa = PBXBuildFile; fileRef = 8171D2402430E0BB004C69EF /* questions.json */; };
+		8171D2432430E923004C69EF /* QuestionsModelEx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8171D2422430E923004C69EF /* QuestionsModelEx.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -50,6 +52,8 @@
 		81403D22242FA7F800767CD8 /* Solutions+BalancedDelimiters.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Solutions+BalancedDelimiters.swift"; sourceTree = "<group>"; };
 		81403D24242FA8EC00767CD8 /* Stack.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Stack.swift; sourceTree = "<group>"; };
 		815105A923F03A83001E52BA /* readme.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = readme.txt; sourceTree = "<group>"; };
+		8171D2402430E0BB004C69EF /* questions.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = questions.json; sourceTree = "<group>"; };
+		8171D2422430E923004C69EF /* QuestionsModelEx.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuestionsModelEx.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -121,6 +125,7 @@
 				81403D19242F830900767CD8 /* Solutions */,
 				8130EB9023EF3ADF007B547F /* QuestionsManager.swift */,
 				8130EB8623EEFDB0007B547F /* QuestionsModel.swift */,
+				8171D2422430E923004C69EF /* QuestionsModelEx.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -141,6 +146,7 @@
 		81403D26242FA8F500767CD8 /* Common Utils */ = {
 			isa = PBXGroup;
 			children = (
+				8171D2402430E0BB004C69EF /* questions.json */,
 				81403D24242FA8EC00767CD8 /* Stack.swift */,
 			);
 			path = "Common Utils";
@@ -208,6 +214,7 @@
 				815105AA23F03A83001E52BA /* readme.txt in Resources */,
 				8130EB7C23EEF9C9007B547F /* .swiftlint.yml in Resources */,
 				8130EB7423EEF51A007B547F /* LaunchScreen.storyboard in Resources */,
+				8171D2412430E0BB004C69EF /* questions.json in Resources */,
 				8130EB7123EEF51A007B547F /* Assets.xcassets in Resources */,
 				8130EB6F23EEF519007B547F /* Main.storyboard in Resources */,
 			);
@@ -248,6 +255,7 @@
 				8130EB6C23EEF519007B547F /* ViewController.swift in Sources */,
 				8130EB9123EF3ADF007B547F /* QuestionsManager.swift in Sources */,
 				8130EB8723EEFDB0007B547F /* QuestionsModel.swift in Sources */,
+				8171D2432430E923004C69EF /* QuestionsModelEx.swift in Sources */,
 				8130EB8F23EF2C99007B547F /* SolutionVC.swift in Sources */,
 				81403D1F242F8BAF00767CD8 /* Solutions+RansomNote.swift in Sources */,
 				8130EB6823EEF519007B547F /* AppDelegate.swift in Sources */,

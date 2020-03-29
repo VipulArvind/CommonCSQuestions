@@ -32,7 +32,7 @@ class SolutionVC: UIViewController {
   
   // MARK: - vars
   
-  public var question: QuestionModel = QuestionModel()
+  public var question = QuestionsModelEx()
 
   override func viewDidLoad() {
     super.viewDidLoad()
@@ -67,7 +67,7 @@ class SolutionVC: UIViewController {
     
     if let firstString = firstString(),
       let secondString = secondString() {
-        let (retString, retBool) =  QuestionsManager.shared.getSolution(questionID: question.questionID, string1: firstString, string2: secondString)
+        let (retString, retBool) =  QuestionsManager.shared.getSolution(questionID: question.id, string1: firstString, string2: secondString)
       if retBool {
         viewSuccessIndicator.backgroundColor = .green
       } else {

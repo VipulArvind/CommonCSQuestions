@@ -34,5 +34,4 @@ struct Stack<Element> {
   func peek () -> Element? {
     return array.last
   }
-  
 }

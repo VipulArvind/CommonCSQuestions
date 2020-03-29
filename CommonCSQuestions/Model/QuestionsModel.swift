@@ -19,7 +19,7 @@ class QuestionModel: NSObject {
   
   // MARK: - vars
   
-  var questionID: Int = 0
+  var id: Int = 0
   var smallTitle: String = ""
   var text: String = ""
   
@@ -33,7 +33,7 @@ class QuestionModel: NSObject {
   override init() {
   }
   
-  init(questionID: Int,
+  init(id: Int,
        smallTitle: String,
        text: String,
        isFirstLabelAndTextValid: Bool,
@@ -41,7 +41,7 @@ class QuestionModel: NSObject {
        isSecondLabelAndTextValid: Bool,
        textForSecondLabel: String) {
     
-    self.questionID = questionID
+    self.id = id
     self.smallTitle = smallTitle
     self.text = text
     
