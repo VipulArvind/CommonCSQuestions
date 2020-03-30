@@ -23,11 +23,12 @@ class QuestionsManager {
     case Fibonacci ((String, String) -> (String, Bool))
     case LonelyInteger ((String, String) -> (String, Bool))
     case BalancedDelimiters ((String, String) -> (String, Bool))
+    case RunLengthEncoding ((String, String) -> (String, Bool))
   }
   
   // MARK: - vars
   
-  public var allQuestions: [QuestionsModelEx] = []
+  public var questions: [QuestionsModelEx] = []
 
   // https://stackoverflow.com/questions/24418951/array-of-functions-in-swift
   var funcs = [MyFuncs]()
@@ -51,8 +52,7 @@ class QuestionsManager {
         let jsonData = try Data(contentsOf: mainUrl)
         let decoder = JSONDecoder()
         let aDict = try decoder.decode(AllQuestions.self, from: jsonData)
-        allQuestions = aDict.questions
-        print("vipul")
+        questions = aDict.questions
       } else {
         print("file doesnt exist")
       }
@@ -60,20 +60,23 @@ class QuestionsManager {
       print(error)
     }
     
+    // ths needs to be moved to JSON and handled appropriately
+    
     funcs.append(MyFuncs.RansomNote(ransomNote))
     funcs.append(MyFuncs.Anagram(anagram))
     funcs.append(MyFuncs.Fibonacci(fibonacci))
     funcs.append(MyFuncs.LonelyInteger(lonelyInteger))
     funcs.append(MyFuncs.BalancedDelimiters(balancedDelimiters))
+    funcs.append(MyFuncs.RunLengthEncoding(runLengthEncoding))
   }
   
   public func count() -> Int {
-    return allQuestions.count
+    return questions.count
   }
   
   public func question(at: Int) -> QuestionsModelEx? {
-    if allQuestions.count > at {
-      return allQuestions[at]
+    if questions.count > at {
+      return questions[at]
     }
     
     return nil
@@ -93,6 +96,8 @@ class QuestionsManager {
     case let .LonelyInteger(tMyFunc):
       return tMyFunc(string1, string2)
     case let .BalancedDelimiters(tMyFunc):
+      return tMyFunc(string1, string2)
+    case let .RunLengthEncoding(tMyFunc):
       return tMyFunc(string1, string2)
     }
   }
@@ -115,5 +120,9 @@ class QuestionsManager {
   
   private func balancedDelimiters(string1: String, string2: String) -> (String, Bool) {
     return Solutions.balancedDelimiters(string1: string1, string2: string2)
+  }
+  
+  private func runLengthEncoding(string1: String, string2: String) -> (String, Bool) {
+    return Solutions.runLengthEncoding(string1: string1, string2: string2)
   }
 }

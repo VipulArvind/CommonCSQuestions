@@ -27,6 +27,8 @@
 		815105AA23F03A83001E52BA /* readme.txt in Resources */ = {isa = PBXBuildFile; fileRef = 815105A923F03A83001E52BA /* readme.txt */; };
 		8171D2412430E0BB004C69EF /* questions.json in Resources */ = {isa = PBXBuildFile; fileRef = 8171D2402430E0BB004C69EF /* questions.json */; };
 		8171D2432430E923004C69EF /* QuestionsModelEx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8171D2422430E923004C69EF /* QuestionsModelEx.swift */; };
+		8171D245243114F9004C69EF /* Solutions+Binary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8171D244243114F9004C69EF /* Solutions+Binary.swift */; };
+		8171D2472431219E004C69EF /* Solutions+RunLengthEncoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8171D2462431219E004C69EF /* Solutions+RunLengthEncoding.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -52,6 +54,8 @@
 		815105A923F03A83001E52BA /* readme.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = readme.txt; sourceTree = "<group>"; };
 		8171D2402430E0BB004C69EF /* questions.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = questions.json; sourceTree = "<group>"; };
 		8171D2422430E923004C69EF /* QuestionsModelEx.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuestionsModelEx.swift; sourceTree = "<group>"; };
+		8171D244243114F9004C69EF /* Solutions+Binary.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Solutions+Binary.swift"; sourceTree = "<group>"; };
+		8171D2462431219E004C69EF /* Solutions+RunLengthEncoding.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Solutions+RunLengthEncoding.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -132,10 +136,12 @@
 			children = (
 				81403D1A242F8A4D00767CD8 /* Solutions.swift */,
 				81403D1C242F8B0200767CD8 /* Solutions+Anagram.swift */,
+				8171D244243114F9004C69EF /* Solutions+Binary.swift */,
 				81403D22242FA7F800767CD8 /* Solutions+BalancedDelimiters.swift */,
 				81403D17242F830000767CD8 /* Solutions+Fibonacci.swift */,
 				81403D20242F8F3500767CD8 /* Solutions+LonelyInteger.swift */,
 				81403D1E242F8BAF00767CD8 /* Solutions+RansomNote.swift */,
+				8171D2462431219E004C69EF /* Solutions+RunLengthEncoding.swift */,
 			);
 			path = Solutions;
 			sourceTree = "<group>";
@@ -255,9 +261,11 @@
 				8130EB8F23EF2C99007B547F /* SolutionVC.swift in Sources */,
 				81403D1F242F8BAF00767CD8 /* Solutions+RansomNote.swift in Sources */,
 				8130EB6823EEF519007B547F /* AppDelegate.swift in Sources */,
+				8171D245243114F9004C69EF /* Solutions+Binary.swift in Sources */,
 				8130EB6A23EEF519007B547F /* SceneDelegate.swift in Sources */,
 				81403D1B242F8A4D00767CD8 /* Solutions.swift in Sources */,
 				81403D23242FA7F800767CD8 /* Solutions+BalancedDelimiters.swift in Sources */,
+				8171D2472431219E004C69EF /* Solutions+RunLengthEncoding.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

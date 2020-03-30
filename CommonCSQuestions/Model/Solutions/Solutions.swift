@@ -54,6 +54,11 @@ class Solutions {
     return Solutions.balancedDelimiters(inString: string1) ? ("Balanced", true):("Not Balanced", true)
   }
   
+  class func runLengthEncoding(string1: String, string2: String) -> (String, Bool) {
+    return (Solutions.runLengthEncoding(str: string1), true)
+  }
+
+  
   func sequenceOf3In(array: [Int]) -> Bool {
     if array.count < 3 {
       return false

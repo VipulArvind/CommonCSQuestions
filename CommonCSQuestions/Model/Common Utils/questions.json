@@ -44,6 +44,16 @@
       "textForFirstLabel": "Please enter the expression",
       "isSecondLabelAndTextValid": false,
       "textForSecondLabel": ""
+    },
+    {
+      "id": 5,
+      "smallTitle": "Run Length Encoding",
+      "text": "Given a sequence of lower case letters, print the frequency if each letter",
+      "isFirstLabelAndTextValid": true,
+      "textForFirstLabel": "Please enter the expression",
+      "isSecondLabelAndTextValid": false,
+      "textForSecondLabel": ""
     }
+
   ]
 }
