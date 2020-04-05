@@ -71,6 +71,15 @@
       "textForFirstLabel": "",
       "isSecondLabelAndTextValid": false,
       "textForSecondLabel": ""
+    },
+    {
+      "id": 8,
+      "smallTitle": "Bubble Sort",
+      "text": "Given a sequence of numbers, arrange them in asecnding order via Bubble Sort",
+      "isFirstLabelAndTextValid": true,
+      "textForFirstLabel": "",
+      "isSecondLabelAndTextValid": false,
+      "textForSecondLabel": ""
     }
   ]
 }

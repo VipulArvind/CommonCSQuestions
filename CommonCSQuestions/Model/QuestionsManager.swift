@@ -26,6 +26,7 @@ class QuestionsManager {
     case RunLengthEncoding ((String, String) -> (String, Bool))
     case SelectionSort ((String, String) -> (String, Bool))
     case RecursiveSelectionSort ((String, String) -> (String, Bool))
+    case BubbleSort ((String, String) -> (String, Bool))
   }
   
   // MARK: - vars
@@ -72,6 +73,7 @@ class QuestionsManager {
     funcs.append(MyFuncs.RunLengthEncoding(runLengthEncoding))
     funcs.append(MyFuncs.SelectionSort(selectionSort))
     funcs.append(MyFuncs.RecursiveSelectionSort(recursiveSelectionSort))
+    funcs.append(MyFuncs.BubbleSort(bubbleSort))
   }
   
   public func count() -> Int {
@@ -107,6 +109,8 @@ class QuestionsManager {
       return tMyFunc(string1, string2)
     case let .RecursiveSelectionSort(tMyFunc):
       return tMyFunc(string1, string2)
+    case let .BubbleSort(tMyFunc):
+        return tMyFunc(string1, string2)
     }
   }
   
@@ -137,7 +141,12 @@ class QuestionsManager {
   private func selectionSort(string1: String, string2: String) -> (String, Bool) {
     return Solutions.selectionSort(string1: string1, string2: string2)
   }
+
   private func recursiveSelectionSort(string1: String, string2: String) -> (String, Bool) {
     return Solutions.recursiveSelectionSort(string1: string1, string2: string2)
   }
+  private func bubbleSort(string1: String, string2: String) -> (String, Bool) {
+    return Solutions.bubbleSort(string1: string1, string2: string2)
+  }
+
 }

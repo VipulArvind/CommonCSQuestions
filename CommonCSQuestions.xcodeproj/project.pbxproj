@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		81137378243A3740006DC5F2 /* Solutions+SelectionSort.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81137377243A3740006DC5F2 /* Solutions+SelectionSort.swift */; };
+		8113737A243A5C2D006DC5F2 /* Solutions+BubbleSort.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81137379243A5C2D006DC5F2 /* Solutions+BubbleSort.swift */; };
 		8130EB6823EEF519007B547F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8130EB6723EEF519007B547F /* AppDelegate.swift */; };
 		8130EB6A23EEF519007B547F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8130EB6923EEF519007B547F /* SceneDelegate.swift */; };
 		8130EB6C23EEF519007B547F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8130EB6B23EEF519007B547F /* ViewController.swift */; };
@@ -34,6 +35,7 @@
 
 /* Begin PBXFileReference section */
 		81137377243A3740006DC5F2 /* Solutions+SelectionSort.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Solutions+SelectionSort.swift"; sourceTree = "<group>"; };
+		81137379243A5C2D006DC5F2 /* Solutions+BubbleSort.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Solutions+BubbleSort.swift"; sourceTree = "<group>"; };
 		8130EB6423EEF519007B547F /* CommonCSQuestions.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CommonCSQuestions.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8130EB6723EEF519007B547F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8130EB6923EEF519007B547F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -145,6 +147,7 @@
 				81403D1E242F8BAF00767CD8 /* Solutions+RansomNote.swift */,
 				8171D2462431219E004C69EF /* Solutions+RunLengthEncoding.swift */,
 				81137377243A3740006DC5F2 /* Solutions+SelectionSort.swift */,
+				81137379243A5C2D006DC5F2 /* Solutions+BubbleSort.swift */,
 			);
 			path = Solutions;
 			sourceTree = "<group>";
@@ -267,6 +270,7 @@
 				8130EB6823EEF519007B547F /* AppDelegate.swift in Sources */,
 				8171D245243114F9004C69EF /* Solutions+Binary.swift in Sources */,
 				8130EB6A23EEF519007B547F /* SceneDelegate.swift in Sources */,
+				8113737A243A5C2D006DC5F2 /* Solutions+BubbleSort.swift in Sources */,
 				81403D1B242F8A4D00767CD8 /* Solutions.swift in Sources */,
 				81403D23242FA7F800767CD8 /* Solutions+BalancedDelimiters.swift in Sources */,
 				8171D2472431219E004C69EF /* Solutions+RunLengthEncoding.swift in Sources */,

@@ -83,6 +83,21 @@ class Solutions {
     let outString = outArray.joined(separator: " ")
     return (outString, true)
   }
+  
+  // "12, 11, 64, 98" - Input
+  // "11, 12, 64, 98" - Output
+  class func bubbleSort(string1: String, string2: String) -> (String, Bool) {
+    let separators = CharacterSet(charactersIn: ":,;")
+    
+    var intArray = string1.components(separatedBy: separators).compactMap {
+      Int($0.trimmingCharacters(in: .whitespaces))
+    }
+    
+    Solutions.bubbleSort(inArray: &intArray)
+    let outArray = intArray.map {String($0)}
+    let outString = outArray.joined(separator: " ")
+    return (outString, true)    
+  }
 
   
   func sequenceOf3In(array: [Int]) -> Bool {
