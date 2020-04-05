@@ -50,10 +50,27 @@
       "smallTitle": "Run Length Encoding",
       "text": "Given a sequence of lower case letters, print the frequency if each letter",
       "isFirstLabelAndTextValid": true,
-      "textForFirstLabel": "Please enter the expression",
+      "textForFirstLabel": "",
+      "isSecondLabelAndTextValid": false,
+      "textForSecondLabel": ""
+    },
+    {
+      "id": 6,
+      "smallTitle": "Selection Sort",
+      "text": "Given a sequence of numbers, arrange them in asecnding order via Selection Sort",
+      "isFirstLabelAndTextValid": true,
+      "textForFirstLabel": "",
+      "isSecondLabelAndTextValid": false,
+      "textForSecondLabel": ""
+    },
+    {
+      "id": 7,
+      "smallTitle": "Recursive Selection Sort",
+      "text": "Given a sequence of numbers, arrange them in asecnding order via Recursive Selection Sort",
+      "isFirstLabelAndTextValid": true,
+      "textForFirstLabel": "",
       "isSecondLabelAndTextValid": false,
       "textForSecondLabel": ""
     }
-
   ]
 }

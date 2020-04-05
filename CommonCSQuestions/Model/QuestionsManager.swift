@@ -24,6 +24,8 @@ class QuestionsManager {
     case LonelyInteger ((String, String) -> (String, Bool))
     case BalancedDelimiters ((String, String) -> (String, Bool))
     case RunLengthEncoding ((String, String) -> (String, Bool))
+    case SelectionSort ((String, String) -> (String, Bool))
+    case RecursiveSelectionSort ((String, String) -> (String, Bool))
   }
   
   // MARK: - vars
@@ -68,6 +70,8 @@ class QuestionsManager {
     funcs.append(MyFuncs.LonelyInteger(lonelyInteger))
     funcs.append(MyFuncs.BalancedDelimiters(balancedDelimiters))
     funcs.append(MyFuncs.RunLengthEncoding(runLengthEncoding))
+    funcs.append(MyFuncs.SelectionSort(selectionSort))
+    funcs.append(MyFuncs.RecursiveSelectionSort(recursiveSelectionSort))
   }
   
   public func count() -> Int {
@@ -99,6 +103,10 @@ class QuestionsManager {
       return tMyFunc(string1, string2)
     case let .RunLengthEncoding(tMyFunc):
       return tMyFunc(string1, string2)
+    case let .SelectionSort(tMyFunc):
+      return tMyFunc(string1, string2)
+    case let .RecursiveSelectionSort(tMyFunc):
+      return tMyFunc(string1, string2)
     }
   }
   
@@ -124,5 +132,12 @@ class QuestionsManager {
   
   private func runLengthEncoding(string1: String, string2: String) -> (String, Bool) {
     return Solutions.runLengthEncoding(string1: string1, string2: string2)
+  }
+  
+  private func selectionSort(string1: String, string2: String) -> (String, Bool) {
+    return Solutions.selectionSort(string1: string1, string2: string2)
+  }
+  private func recursiveSelectionSort(string1: String, string2: String) -> (String, Bool) {
+    return Solutions.recursiveSelectionSort(string1: string1, string2: string2)
   }
 }

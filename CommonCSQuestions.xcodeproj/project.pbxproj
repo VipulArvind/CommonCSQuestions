@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		81137378243A3740006DC5F2 /* Solutions+SelectionSort.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81137377243A3740006DC5F2 /* Solutions+SelectionSort.swift */; };
 		8130EB6823EEF519007B547F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8130EB6723EEF519007B547F /* AppDelegate.swift */; };
 		8130EB6A23EEF519007B547F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8130EB6923EEF519007B547F /* SceneDelegate.swift */; };
 		8130EB6C23EEF519007B547F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8130EB6B23EEF519007B547F /* ViewController.swift */; };
@@ -32,6 +33,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		81137377243A3740006DC5F2 /* Solutions+SelectionSort.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Solutions+SelectionSort.swift"; sourceTree = "<group>"; };
 		8130EB6423EEF519007B547F /* CommonCSQuestions.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CommonCSQuestions.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8130EB6723EEF519007B547F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8130EB6923EEF519007B547F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -142,6 +144,7 @@
 				81403D20242F8F3500767CD8 /* Solutions+LonelyInteger.swift */,
 				81403D1E242F8BAF00767CD8 /* Solutions+RansomNote.swift */,
 				8171D2462431219E004C69EF /* Solutions+RunLengthEncoding.swift */,
+				81137377243A3740006DC5F2 /* Solutions+SelectionSort.swift */,
 			);
 			path = Solutions;
 			sourceTree = "<group>";
@@ -258,6 +261,7 @@
 				8130EB6C23EEF519007B547F /* ViewController.swift in Sources */,
 				8130EB9123EF3ADF007B547F /* QuestionsManager.swift in Sources */,
 				8171D2432430E923004C69EF /* QuestionsModelEx.swift in Sources */,
+				81137378243A3740006DC5F2 /* Solutions+SelectionSort.swift in Sources */,
 				8130EB8F23EF2C99007B547F /* SolutionVC.swift in Sources */,
 				81403D1F242F8BAF00767CD8 /* Solutions+RansomNote.swift in Sources */,
 				8130EB6823EEF519007B547F /* AppDelegate.swift in Sources */,
