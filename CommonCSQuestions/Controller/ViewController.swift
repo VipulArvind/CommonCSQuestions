@@ -74,8 +74,10 @@ extension ViewController: UICollectionViewDataSource, UICollectionViewDelegateFl
     return cell
   }
   
+  
   func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-    return CGSize(width: CVQuestions.frame.width, height: 60.0)
+    let minSpacingCells: CGFloat = 1.0
+    return CGSize(width: CVQuestions.frame.width/2 - (minSpacingCells + 1), height: 50.0)
   }
 }
 

@@ -31,6 +31,7 @@
 		8171D2432430E923004C69EF /* QuestionsModelEx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8171D2422430E923004C69EF /* QuestionsModelEx.swift */; };
 		8171D245243114F9004C69EF /* Solutions+Binary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8171D244243114F9004C69EF /* Solutions+Binary.swift */; };
 		8171D2472431219E004C69EF /* Solutions+RunLengthEncoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8171D2462431219E004C69EF /* Solutions+RunLengthEncoding.swift */; };
+		81D3A4DF243BB33B0006B550 /* Solutions+InsertionSort.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81D3A4DE243BB33B0006B550 /* Solutions+InsertionSort.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -60,6 +61,7 @@
 		8171D2422430E923004C69EF /* QuestionsModelEx.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuestionsModelEx.swift; sourceTree = "<group>"; };
 		8171D244243114F9004C69EF /* Solutions+Binary.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Solutions+Binary.swift"; sourceTree = "<group>"; };
 		8171D2462431219E004C69EF /* Solutions+RunLengthEncoding.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Solutions+RunLengthEncoding.swift"; sourceTree = "<group>"; };
+		81D3A4DE243BB33B0006B550 /* Solutions+InsertionSort.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Solutions+InsertionSort.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -148,6 +150,7 @@
 				8171D2462431219E004C69EF /* Solutions+RunLengthEncoding.swift */,
 				81137377243A3740006DC5F2 /* Solutions+SelectionSort.swift */,
 				81137379243A5C2D006DC5F2 /* Solutions+BubbleSort.swift */,
+				81D3A4DE243BB33B0006B550 /* Solutions+InsertionSort.swift */,
 			);
 			path = Solutions;
 			sourceTree = "<group>";
@@ -257,6 +260,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				81403D21242F8F3500767CD8 /* Solutions+LonelyInteger.swift in Sources */,
+				81D3A4DF243BB33B0006B550 /* Solutions+InsertionSort.swift in Sources */,
 				81403D1D242F8B0200767CD8 /* Solutions+Anagram.swift in Sources */,
 				81403D25242FA8EC00767CD8 /* Stack.swift in Sources */,
 				81403D18242F830100767CD8 /* Solutions+Fibonacci.swift in Sources */,

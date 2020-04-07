@@ -32,4 +32,19 @@ extension Solutions {
       }
     }
   }
+  
+  // 64 25 12 22 11
+  //5,
+  //4
+  class func recursiveBubbleSort(inArray: inout [Int], n: Int) {
+    if n == 1 {       // exit condition
+      return
+    }
+    
+    for Index in 0...n - 2 where inArray[Index] > inArray[Index+1] {
+      inArray.swapAt(Index, Index+1)
+    }
+    
+    recursiveBubbleSort(inArray: &inArray, n: n-1)
+  }
 }

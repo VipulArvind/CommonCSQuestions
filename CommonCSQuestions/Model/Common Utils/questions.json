@@ -2,7 +2,7 @@
   "questions": [
     {
       "id": 0,
-      "smallTitle": "Ransom Note from Magazine Article",
+      "smallTitle": "Ransom Note",
       "text": "A Kidnapper wishes to write a ransom note using letters from a Magazine article. Given the article and ransom text, find whether the kidnapper can write the note or not",
       "isFirstLabelAndTextValid": true,
       "textForFirstLabel": "Please enter the ransom Note",
@@ -11,7 +11,7 @@
     },
     {
       "id": 1,
-      "smallTitle": "Test 2 Strings for Anagram",
+      "smallTitle": "Anagram",
       "text": "Write a function to check if 2 strings are anagram of each other or not",
       "isFirstLabelAndTextValid": true,
       "textForFirstLabel": "Please enter first string",
@@ -20,7 +20,7 @@
     },
     {
       "id": 2,
-      "smallTitle": "nth Item of Fibonacci Series",
+      "smallTitle": "nth Item Fibonacci Series",
       "text": "Write a function to print the nth item in Fibonacci Series",
       "isFirstLabelAndTextValid": true,
       "textForFirstLabel": "Please enter the index of item",
@@ -76,6 +76,33 @@
       "id": 8,
       "smallTitle": "Bubble Sort",
       "text": "Given a sequence of numbers, arrange them in asecnding order via Bubble Sort",
+      "isFirstLabelAndTextValid": true,
+      "textForFirstLabel": "",
+      "isSecondLabelAndTextValid": false,
+      "textForSecondLabel": ""
+    },
+    {
+      "id": 9,
+      "smallTitle": "Recursive Bubble Sort",
+      "text": "Given a sequence of numbers, arrange them in asecnding order via Recursive Bubble Sort",
+      "isFirstLabelAndTextValid": true,
+      "textForFirstLabel": "",
+      "isSecondLabelAndTextValid": false,
+      "textForSecondLabel": ""
+    },
+    {
+      "id": 10,
+      "smallTitle": "Insertion Sort",
+      "text": "Given a sequence of numbers, arrange them in asecnding order via Insertion Sort",
+      "isFirstLabelAndTextValid": true,
+      "textForFirstLabel": "",
+      "isSecondLabelAndTextValid": false,
+      "textForSecondLabel": ""
+    },
+    {
+      "id": 11,
+      "smallTitle": "Recursive Insertion Sort",
+      "text": "Given a sequence of numbers, arrange them in asecnding order via Recursive Insertion Sort",
       "isFirstLabelAndTextValid": true,
       "textForFirstLabel": "",
       "isSecondLabelAndTextValid": false,

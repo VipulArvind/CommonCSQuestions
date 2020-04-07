@@ -99,6 +99,45 @@ class Solutions {
     return (outString, true)    
   }
 
+  class func recursiveBubbleSort(string1: String, string2: String) -> (String, Bool) {
+    let separators = CharacterSet(charactersIn: ":,;")
+    
+    var intArray = string1.components(separatedBy: separators).compactMap {
+      Int($0.trimmingCharacters(in: .whitespaces))
+    }
+    
+    Solutions.recursiveBubbleSort(inArray: &intArray, n: intArray.count)
+    let outArray = intArray.map {String($0)}
+    let outString = outArray.joined(separator: " ")
+    return (outString, true)
+  }
+
+  class func insertionSort(string1: String, string2: String) -> (String, Bool) {
+    let separators = CharacterSet(charactersIn: ":,;")
+    
+    var intArray = string1.components(separatedBy: separators).compactMap {
+      Int($0.trimmingCharacters(in: .whitespaces))
+    }
+    
+    Solutions.insertionSort(inArray: &intArray)
+    let outArray = intArray.map {String($0)}
+    let outString = outArray.joined(separator: " ")
+    return (outString, true)
+  }
+  
+  class func recursiveInsertionSort(string1: String, string2: String) -> (String, Bool) {
+    let separators = CharacterSet(charactersIn: ":,;")
+    
+    var intArray = string1.components(separatedBy: separators).compactMap {
+      Int($0.trimmingCharacters(in: .whitespaces))
+    }
+    
+    Solutions.recursiveInsertionSort(inArray: &intArray, n: intArray.count)
+    let outArray = intArray.map {String($0)}
+    let outString = outArray.joined(separator: " ")
+    return (outString, true)
+  }
+
   
   func sequenceOf3In(array: [Int]) -> Bool {
     if array.count < 3 {

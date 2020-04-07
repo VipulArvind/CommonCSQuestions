@@ -27,6 +27,9 @@ class QuestionsManager {
     case SelectionSort ((String, String) -> (String, Bool))
     case RecursiveSelectionSort ((String, String) -> (String, Bool))
     case BubbleSort ((String, String) -> (String, Bool))
+    case RecursiveBubbleSort ((String, String) -> (String, Bool))
+    case InsertionSort ((String, String) -> (String, Bool))
+    case RecursiveInsertionSort ((String, String) -> (String, Bool))
   }
   
   // MARK: - vars
@@ -74,6 +77,9 @@ class QuestionsManager {
     funcs.append(MyFuncs.SelectionSort(selectionSort))
     funcs.append(MyFuncs.RecursiveSelectionSort(recursiveSelectionSort))
     funcs.append(MyFuncs.BubbleSort(bubbleSort))
+    funcs.append(MyFuncs.RecursiveBubbleSort(recursiveBubbleSort))
+    funcs.append(MyFuncs.InsertionSort(insertionSort))
+    funcs.append(MyFuncs.RecursiveInsertionSort(recursiveInsertionSort))
   }
   
   public func count() -> Int {
@@ -110,7 +116,13 @@ class QuestionsManager {
     case let .RecursiveSelectionSort(tMyFunc):
       return tMyFunc(string1, string2)
     case let .BubbleSort(tMyFunc):
-        return tMyFunc(string1, string2)
+      return tMyFunc(string1, string2)
+    case let .RecursiveBubbleSort(tMyFunc):
+      return tMyFunc(string1, string2)
+    case let .InsertionSort(tMyFunc):
+      return tMyFunc(string1, string2)
+    case let .RecursiveInsertionSort(tMyFunc):
+      return tMyFunc(string1, string2)
     }
   }
   
@@ -145,8 +157,22 @@ class QuestionsManager {
   private func recursiveSelectionSort(string1: String, string2: String) -> (String, Bool) {
     return Solutions.recursiveSelectionSort(string1: string1, string2: string2)
   }
+
   private func bubbleSort(string1: String, string2: String) -> (String, Bool) {
     return Solutions.bubbleSort(string1: string1, string2: string2)
   }
+  
+  private func recursiveBubbleSort(string1: String, string2: String) -> (String, Bool) {
+    return Solutions.recursiveBubbleSort(string1: string1, string2: string2)
+  }
+  
+  private func insertionSort(string1: String, string2: String) -> (String, Bool) {
+    return Solutions.insertionSort(string1: string1, string2: string2)
+  }
+
+  private func recursiveInsertionSort(string1: String, string2: String) -> (String, Bool) {
+    return Solutions.recursiveInsertionSort(string1: string1, string2: string2)
+  }
+
 
 }
